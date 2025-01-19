@@ -27,9 +27,12 @@ def home(request):
         return render(request, 'home.html', {})
 
 
-def login_user(request):
-    pass
+# def login_user(request):
+#     pass
 
 
-def logot_user(request):
-    pass
+def logout_user(request):
+    logout(request)
+    messages.success(request, "You have been log OUT successfully")
+    return redirect("home")
+
