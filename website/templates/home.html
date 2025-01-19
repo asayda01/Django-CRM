@@ -6,9 +6,39 @@
     <meta charset="UTF-8">
     <title>Hello World!</title>
 </head>
-<body>
-    <h1>Hello World!</h1>
-</body>
+<div class="col-md-6 offset-md-3">
+    {% if user.is_authenticated %}
+    <h1> Hello World ! </h1>
+
+    {% else %}
+
+    <body>
+        <h1>Login</h1>
+        <br/>
+
+        <form method="POST" action="{% url 'home'%}">
+              {% csrf_token %}
+            <form>
+              <div class="mb-3">
+
+                <input type="text" class="form-control" name="username", placeholder="UserName" required>
+
+              </div>
+
+                <br/>
+              <div class="mb-3">
+                <input type="password" class="form-control" name="password", placeholder="Password" required>
+              </div>
+
+                <br/>
+              <button type="submit" class="btn btn-secondary">Login</button>
+
+            </form>
+
+        </form>
+    </body>
+    {% endif %}
+    </div>
 </html>
 
 {% endblock %}
