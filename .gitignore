@@ -1,0 +1,15 @@
+# Ignore PyCharm settings
+.idea/
+
+# Ignore virtual environment
+django_crm_venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore system files
+.DS_Store
+Thumbs.db
