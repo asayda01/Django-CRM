@@ -16,6 +16,6 @@ except Error as e:
 cursorObject = dataBase.cursor()
 
 # Create a DataBase
-cursorObject.execute("CREATE DATABASE elderco")
+cursorObject.execute("CREATE DATABASE django_crm_mysql_database")
 
 print("All Done!!!")
